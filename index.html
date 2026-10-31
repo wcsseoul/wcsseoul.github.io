@@ -4,219 +4,235 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>West Coast Swing Seoul</title>
+<meta name="description" content="Three Sunday evening West Coast Swing classes for complete beginners, taught in English. Starts Sunday, Dec 6, near Gangnam Station, Seoul.">
+<!-- Link previews (KakaoTalk, WhatsApp, Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Learn West Coast Swing. Make friends in Seoul.">
+<meta property="og:description" content="Three Sunday evening classes for complete beginners, taught in English. Starts Sunday, Dec 6, near Gangnam Station.">
+<meta property="og:image" content="https://wcsseoul.github.io/group-photo-2.jpg">
+<meta property="og:url" content="https://wcsseoul.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap">
 <style>
 /* Light-only so it matches the Google Sites page around it */
 :root{
   --bg:#F2F3F9; --surface:#FFFFFF; --fg:#18163A; --muted:#5B5A78; --line:#DADBEA;
-  --accent:#D93D6E; --accent-ink:#FFFFFF; --soft:#FBE4EC;
-  --display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --accent:#CB4436; --accent-ink:#FFFFFF; --accent-text:#B5382B; --soft:#FDE7E1;
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono:"DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   color-scheme:light;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;padding:0 16px}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+a{color:var(--accent-text)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .wrap{max-width:680px;margin:0 auto}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-weight:600;
-  background:var(--accent);color:var(--accent-ink);text-decoration:none;border:0;border-radius:999px;padding:10px 18px;font-size:.95rem;cursor:pointer;transition:transform .15s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--body);font-weight:600;
+  background:var(--accent);color:var(--accent-ink);text-decoration:none;border:0;border-radius:999px;padding:15px 26px;font-size:1.05rem;cursor:pointer;transition:transform .15s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn.big{padding:15px 26px;font-size:1.05rem}
-.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line)}
 
 .hero{padding:40px 0 28px;display:grid;gap:22px}
-.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,8vw,4rem);line-height:1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-weight:800;font-size:clamp(2.4rem,8vw,3.8rem);line-height:1.02;letter-spacing:-.025em;margin:0;text-wrap:balance}
 h1 em{font-style:normal;color:var(--accent)}
-.lede{font-size:1.15rem;color:var(--muted);margin:0;max-width:34ch}
-.counts{display:flex;align-items:flex-end;border-bottom:2px solid var(--fg);padding-bottom:6px;overflow:hidden}
-.counts span{flex:1;font-family:var(--mono);font-size:.85rem;color:var(--muted);position:relative}
-.counts span::after{content:"";position:absolute;left:0;bottom:-8px;width:2px;height:8px;background:var(--fg)}
-.counts span.hit{color:var(--accent);font-weight:500}
-.slotnote{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:-12px}
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.facts li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.92rem}
-.facts b{font-weight:600}
-.cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.lede{font-size:1.15rem;color:var(--muted);margin:0;max-width:36ch}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{display:grid;gap:2px;align-content:start}
+.facts dt{font-size:.85rem;color:var(--muted)}
+.facts dd{margin:0;font-weight:600;line-height:1.35}
+@media (max-width:560px){.facts{grid-template-columns:1fr 1fr}}
 
 section{padding:34px 0;border-top:1px solid var(--line);display:grid;gap:14px}
-h2{font-family:var(--display);font-weight:700;font-size:1.7rem;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}
-h3{font-family:var(--body);font-weight:600;font-size:1rem;margin:0}
+h2{font-weight:800;font-size:1.65rem;line-height:1.15;margin:0;letter-spacing:-.015em;text-wrap:balance}
+h3{font-weight:600;font-size:1rem;margin:0}
 p{margin:0}
 .ticks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .ticks li{padding-left:28px;position:relative}
-.ticks li::before{content:"";position:absolute;left:2px;top:.55em;width:14px;height:7px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg)}
+.ticks li::before{content:"";position:absolute;left:2px;top:.55em;width:14px;height:7px;border-left:2.5px solid var(--fg);border-bottom:2.5px solid var(--fg);transform:rotate(-45deg)}
+
+.face{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block}
+.photo{width:100%;height:auto;border-radius:14px;display:block}
+.hero-photo{margin:0;display:grid;gap:8px}
+.cta{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.spots{color:var(--muted);font-size:.95rem}
+.hero-photo figcaption{font-size:.85rem;color:var(--muted)}
+.media{width:100%;aspect-ratio:16/9;border:0;border-radius:14px;display:block}
+.videos{display:grid;gap:12px}
+.todo{background:#FFF4C2;padding:0 4px;border-radius:4px}
+
+.teachers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.teacher{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+.teacher p{font-size:.95rem;color:var(--muted)}
 
 dl.info{display:grid;grid-template-columns:max-content 1fr;gap:10px 20px;margin:0}
-dl.info dt{font-family:var(--mono);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-top:.2em}
+dl.info dt{font-size:.92rem;font-weight:600;color:var(--muted);padding-top:.1em}
 dl.info dd{margin:0;min-width:0}
+dl.info .note{display:block;margin-top:6px}
 @media (max-width:480px){dl.info{grid-template-columns:1fr;gap:2px}dl.info dd{margin-bottom:10px}}
 
 .dates{display:flex;gap:8px;flex-wrap:wrap}
 .date{border:1.5px solid var(--fg);border-radius:10px;padding:6px 12px;text-align:center;line-height:1.2}
-.date small{display:block;font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.08em}
-.date strong{font-family:var(--display);font-size:1.25rem}
+.date small{display:block;font-size:.8rem;color:var(--muted)}
+.date strong{font-size:1.2rem;font-weight:800}
 
-.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.price{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:6px;align-content:start}
-.price.main{border:2px solid var(--accent)}
-.price .amt{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
-.price .amt small{font-family:var(--mono);font-weight:400;font-size:.8rem;color:var(--muted)}
-.price .tag{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
-.price p{font-size:.93rem;color:var(--muted)}
+.pricelist{margin:0;padding:0;list-style:none}
+.pricelist li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.pricelist li:first-child{border-top:1px solid var(--line)}
+.pricelist span{display:grid}
+.pricelist small{font-size:.9rem;color:var(--muted)}
+.pricelist b{font-size:1.25rem;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
 .deal{background:var(--soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
 
-.pay{display:grid;gap:12px}
-.method{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:8px}
-.acct{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.acct code{font-family:var(--mono);font-size:1.1rem;font-weight:500;background:var(--bg);border-radius:8px;padding:6px 10px;user-select:all}
-.copy{font-family:var(--mono);font-size:.78rem;background:transparent;border:1.5px solid var(--line);color:var(--fg);border-radius:999px;padding:6px 12px;cursor:pointer}
 .note{font-size:.92rem;color:var(--muted)}
-.warn{border-left:3px solid var(--accent);padding-left:12px}
 
 .closing{padding:44px 0 56px}
 .closing h2{font-size:clamp(1.8rem,6vw,2.4rem)}
+
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:400;color:var(--muted)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:8px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <main class="wrap">
   <div class="hero">
-    <span class="eyebrow">Sundays · Dec 6 – 20, 2026 · in English</span>
     <h1>Learn West Coast Swing. Make <em>friends</em> in Seoul.</h1>
-    <p class="lede">A 3-week beginner series for anyone who wants an English-speaking social activity. No partner or experience needed.</p>
-    <div class="counts" aria-hidden="true">
-      <span>1</span><span>2</span><span class="hit">3&amp;4</span><span>5</span><span class="hit">&amp;6</span>
+    <p class="lede">Three Sunday evening classes for complete beginners, taught in English. Come on your own. You’ll meet people as you learn.</p>
+    <dl class="facts">
+      <div><dt>Starts</dt><dd>Sunday, Dec 6</dd></div>
+      <div><dt>Time</dt><dd>Sundays<br>6:30–7:30 PM</dd></div>
+      <div><dt>Where</dt><dd>Near Gangnam Station</dd></div>
+      <div><dt>Price</dt><dd>60,000 KRW</dd></div>
+    </dl>
+    <div class="cta">
+      <a class="btn" href="https://forms.gle/zWBgyvfzGJrxwpyA7" target="_blank" rel="noopener">Save my spot</a>
+      <p class="spots">30 spots. Sign up by Friday, Dec 4.</p>
     </div>
-    <p class="slotnote" aria-hidden="true">the basic: walk, walk, triple step, triple step</p>
-    <ul class="facts">
-      <li><b>6:30–7:30 PM</b></li>
-      <li>Westies, Gangnam</li>
-      <li>From <b>55,000 KRW</b></li>
-      <li>15 leaders + 15 followers</li>
-    </ul>
-    <div class="cta-row">
-      <a class="btn big" href="https://forms.gle/REPLACE-WITH-FORM-LINK" target="_blank" rel="noopener">Save my spot ↗</a>
-    </div>
+    <figure class="hero-photo">
+      <img class="photo" src="group-photo-2.jpg" width="1200" height="675" alt="West Coast Swing dancers making heart shapes together in a Seoul dance studio">
+      <figcaption>Seoul West Coast Swing community</figcaption>
+    </figure>
   </div>
 
   <section>
-    <h2>This is for you if you</h2>
+    <h2>This is for you if</h2>
     <ul class="ticks">
-      <li>Want an English-speaking social activity in Seoul</li>
-      <li>Want to try a fun, easy-to-learn dance</li>
-      <li>Have no dance experience</li>
+      <li>You’re in Seoul and want to meet people outside work, Koreans and foreigners alike, without it being another night at a bar</li>
+      <li>You’ve always wanted to learn to dance, but never had a partner (or the nerve)</li>
+      <li>You’d rather learn dancing in English, or want to practise your English while you learn</li>
+      <li>You’d like to start from scratch with other people who are new to it too</li>
     </ul>
   </section>
 
   <section>
     <h2>What is West Coast Swing?</h2>
-    <p>A smooth partner dance you can do to almost anything, from pop to R&amp;B. You dance in a "slot": the follower travels back and forth along a line while the leader stays near the centre.</p>
-    <p><a href="https://www.youtube.com/results?search_query=west+coast+swing+social+dance" target="_blank" rel="noopener">Watch West Coast Swing on YouTube ↗</a></p>
+    <p>A smooth, relaxed partner dance you can do to the music you already listen to: pop, R&amp;B, hip-hop, even slow ballads.</p>
+    <p>There’s no choreography to memorise. You learn a few basic moves, then the leader chooses what comes next and the follower goes with it. It works a bit like a conversation.</p>
+    <p>After three Sundays, you’ll know enough of the basics to ask someone to dance at the social dance party and enjoy it.</p>
+    <div class="videos">
+      <iframe class="media" src="https://www.youtube.com/embed/-jeJbGbhgmE" title="West Coast Swing social dancing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
   </section>
 
   <section>
-    <h2>Class schedule &amp; info</h2>
+    <h2>Your teachers</h2>
+    <div class="teachers">
+      <div class="teacher">
+        <img class="face" src="jamie.jpg" width="96" height="96" alt="Jamie dancing">
+        <div>
+          <h3>Jamie</h3>
+          <p>Jamie is from the US and has been dancing West Coast Swing for <span class="todo">[xx]</span> years. <span class="todo">[placeholder text: maybe something about why we like West Coast Swing?]</span></p>
+        </div>
+      </div>
+      <div class="teacher">
+        <img class="face" src="joe.jpg" width="96" height="96" alt="Joe">
+        <div>
+          <h3>Joe</h3>
+          <p>Joe is from the UK and has been dancing West Coast Swing for over 10 years. <span class="todo">[placeholder text: maybe something about why we like West Coast Swing?]</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Class schedule</h2>
     <div class="dates" aria-label="Class dates">
-      <div class="date"><small>SUN</small><strong>Dec 6</strong></div>
-      <div class="date"><small>SUN</small><strong>Dec 13</strong></div>
-      <div class="date"><small>SUN</small><strong>Dec 20</strong></div>
+      <div class="date"><small>Sun</small><strong>Dec 6</strong></div>
+      <div class="date"><small>Sun</small><strong>Dec 13</strong></div>
+      <div class="date"><small>Sun</small><strong>Dec 20</strong></div>
     </div>
     <dl class="info">
-      <dt>Time</dt><dd>6:30 PM – 7:30 PM</dd>
-      <dt>Instructors</dt><dd>Jamie &amp; Joe</dd>
-      <dt>Language</dt><dd>English</dd>
-      <dt>Who can join</dt><dd>Anyone interested in West Coast Swing. No partner or experience needed.</dd>
-      <dt>Capacity</dt><dd>First 15 Leaders (men) &amp; 15 Followers (women). Spots go first come, first served, by payment.</dd>
-      <dt>Bring</dt><dd>Clean indoor shoes or dance sneakers</dd>
+      <dt>Class</dt><dd>6:30–7:30 PM. We rotate partners, so you’ll dance with everyone.</dd>
+      <dt>After class</dt><dd>Stay for the social dance party. Entry is free for students, and we’ll be there to dance with you.</dd>
+      <dt>Roles</dt><dd>15 leaders and 15 followers, first come, first served.
+        <span class="note">Leaders guide the moves and followers respond to them. In beginner classes, men usually learn to lead and women to follow, so if you’re unsure, start there. You can always learn the other role later.</span></dd>
+      <dt>Bring</dt><dd>Dance shoes, or comfortable shoes that aren’t too grippy. Comfortable clothes and water.</dd>
     </dl>
   </section>
 
   <section>
-    <h2>Venue &amp; getting there</h2>
+    <h2>Venue and getting there</h2>
     <dl class="info">
-      <dt>Venue</dt><dd>Westies (웨스티스)<br><a href="https://naver.me/5ch06UGN" target="_blank" rel="noopener">Open in Naver Map ↗</a></dd>
-      <dt>Transport</dt><dd>No venue parking. Public transport is recommended.</dd>
+      <dt>Venue</dt><dd>Westies (웨스티스)<br><a href="https://naver.me/5ch06UGN" target="_blank" rel="noopener">Open in Naver Map</a></dd>
+      <dt>From the station</dt><dd><span class="todo">[placeholder for walking instructions from Gangnam Station]</span></dd>
+      <dt>Transport</dt><dd>There's no parking at the venue, so we recommend public transport.</dd>
       <dt>Parking</dt><dd>
-        <strong>Nice Park, Samwon Tower</strong>: holiday 1-day pass 8,000 KRW (00:00–23:59), 5-min walk. Buy the ticket in the Modu Parking (모두의주차장) app before you enter.<br>
-        <strong>Public lots</strong>: Yeoksam 1-dong Cultural Center, Gangnam Cultural Center
+        <strong>Nice Park, Samwon Tower</strong>: weekend day pass 8,000 KRW, valid all day, 5 minutes' walk. Buy the ticket in the Modu Parking (모두의주차장) app before you drive in.<br>
+        <strong>Public car parks</strong>: Yeoksam 1-dong Cultural Center, Gangnam Cultural Center
       </dd>
     </dl>
   </section>
 
   <section>
     <h2>Pricing</h2>
-    <div class="prices">
-      <div class="price main">
-        <span class="tag">Recommended</span>
-        <h3>Full 3-week series</h3>
-        <div class="amt">60,000 <small>KRW</small></div>
-        <p>All 3 classes. Includes social dance entry.</p>
-      </div>
-      <div class="price">
-        <span class="tag">Single class</span>
-        <h3>Drop-in</h3>
-        <div class="amt">25,000 <small>KRW</small></div>
-        <p>Includes social dance entry. Best if you already know some WCS basics.</p>
-      </div>
-    </div>
-    <p class="deal"><strong>Bring a friend:</strong> 5,000 KRW off per person when 2 or more of you register for the full series together (55,000 KRW each).</p>
+    <ul class="pricelist">
+      <li><span>All 3 classes<small>Includes the social dance party after each class</small></span><b>60,000 KRW</b></li>
+      <li><span>Single class<small>If you already know some West Coast Swing</small></span><b>25,000 KRW</b></li>
+    </ul>
+    <p class="deal"><strong>Bring a friend:</strong> sign up for all 3 classes together and you each pay 55,000 KRW.</p>
   </section>
 
   <section>
     <h2>Payment</h2>
-    <div class="pay">
-      <div class="method">
-        <h3>1. Bank transfer</h3>
-        <p class="note">KB Bank · Byeon Seong-jae (변성재 웨코)</p>
-        <div class="acct">
-          <code id="acct">449901-01-227967</code>
-          <button class="copy" id="copyBtn" type="button">Copy</button>
-        </div>
-        <p class="note">Sender name: your name + N, e.g. <strong>AlexN</strong></p>
-      </div>
-      <div class="method">
-        <h3>2. Pay on site</h3>
-        <p class="note">You can pay on the day of the class.</p>
-        <p class="note warn">The card terminal can't process overseas or foreign credit cards. If you only have an international card, bring cash.</p>
-      </div>
-    </div>
+    <p>You can pay by Korean bank transfer, Venmo or Wise. You’ll get the payment details when you sign up.</p>
+    <p>If you can't use any of these, let us know on the sign-up form and we'll sort something out.</p>
+    <p>Please pay within 48 hours of signing up. Your spot is confirmed once we receive payment.</p>
   </section>
 
   <section>
     <h2>Policies</h2>
     <dl class="info">
-      <dt>Refunds</dt><dd>Full refund before the course starts. No refunds once the first class has started.</dd>
-      <dt>Cancellation</dt><dd>The class may be cancelled if fewer than 3 leaders and 3 followers register. You'll be notified individually 3 days before the start date.</dd>
+      <dt>Refunds</dt><dd>Full refund up to 48 hours before the first class. No refunds after that.</dd>
+      <dt>Cancellation</dt><dd>If fewer than 3 leaders and 3 followers sign up, we may cancel the course. We'll message you 3 days before the start date.</dd>
     </dl>
   </section>
 
+  <section>
+    <h2>Questions</h2>
+    <div class="faq">
+      <details><summary>Do I need to bring a partner?</summary><p>No. Come on your own. We rotate partners during class, so you’ll dance with everyone.</p></details>
+      <details><summary>I’ve never danced and I’ve got no rhythm. Is that OK?</summary><p>Yes. The class is for complete beginners and we start from the very basics.</p></details>
+      <details><summary>What should I wear?</summary><p>Comfortable clothes you can move in, and dance shoes or comfortable shoes that aren’t too grippy. Bring water too.</p></details>
+      <details><summary>Do I have to stay for the social dance party?</summary><p>No, it’s optional. Stay as long as you like, or head home after class.</p></details>
+      <details><summary>When do I need to pay?</summary><p>Within 48 hours of signing up. Your spot is confirmed once we receive payment. Sign-ups close on Friday, Dec 4.</p></details>
+      <details><summary>How do I get there?</summary><p>Take the subway to Gangnam Station and leave by exit 2. Walking directions are under Venue and getting there.</p></details>
+    </div>
+  </section>
+
   <section class="closing">
-    <h2>Turn your playlist into a dance floor.</h2>
-    <p class="lede">Register, transfer the fee, and your spot is confirmed.</p>
-    <div class="cta-row">
-      <a class="btn ghost" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSuCQAibFvSnmUYWoTQwMdhs4lIMbCH_i9ZKbZGGJ3KFwJu-30kqxwJvZVJwEt7b7B7cfQByWuta-rX/pubhtml?gid=1&amp;single=true" target="_blank" rel="noopener">Check registration status ↗</a>
+    <h2>The first class is on Sunday, Dec 6.</h2>
+    <p class="lede">Sign up by Friday, Dec 4.</p>
+    <div>
+      <a class="btn" href="https://forms.gle/zWBgyvfzGJrxwpyA7" target="_blank" rel="noopener">Sign up now</a>
     </div>
   </section>
 </main>
 
-<script>
-(function(){
-  var btn=document.getElementById('copyBtn'), el=document.getElementById('acct');
-  function selectIt(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';}
-  btn.addEventListener('click',function(){
-    var t=el.textContent.trim();
-    try{
-      navigator.clipboard.writeText(t).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1800)},selectIt);
-    }catch(e){selectIt();}
-  });
-})();
-</script>
 </body>
 </html>
