@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>West Coast Swing Seoul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Light-only so it matches the Google Sites page around it */
+:root{
+  --bg:#F2F3F9; --surface:#FFFFFF; --fg:#18163A; --muted:#5B5A78; --line:#DADBEA;
+  --accent:#D93D6E; --accent-ink:#FFFFFF; --soft:#FBE4EC;
+  --display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;padding:0 16px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:680px;margin:0 auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-weight:600;
+  background:var(--accent);color:var(--accent-ink);text-decoration:none;border:0;border-radius:999px;padding:10px 18px;font-size:.95rem;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.big{padding:15px 26px;font-size:1.05rem}
+.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line)}
+
+.hero{padding:40px 0 28px;display:grid;gap:22px}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,8vw,4rem);line-height:1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:1.15rem;color:var(--muted);margin:0;max-width:34ch}
+.counts{display:flex;align-items:flex-end;border-bottom:2px solid var(--fg);padding-bottom:6px;overflow:hidden}
+.counts span{flex:1;font-family:var(--mono);font-size:.85rem;color:var(--muted);position:relative}
+.counts span::after{content:"";position:absolute;left:0;bottom:-8px;width:2px;height:8px;background:var(--fg)}
+.counts span.hit{color:var(--accent);font-weight:500}
+.slotnote{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:-12px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.facts li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.92rem}
+.facts b{font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+section{padding:34px 0;border-top:1px solid var(--line);display:grid;gap:14px}
+h2{font-family:var(--display);font-weight:700;font-size:1.7rem;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-family:var(--body);font-weight:600;font-size:1rem;margin:0}
+p{margin:0}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ticks li{padding-left:28px;position:relative}
+.ticks li::before{content:"";position:absolute;left:2px;top:.55em;width:14px;height:7px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg)}
+
+dl.info{display:grid;grid-template-columns:max-content 1fr;gap:10px 20px;margin:0}
+dl.info dt{font-family:var(--mono);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-top:.2em}
+dl.info dd{margin:0;min-width:0}
+@media (max-width:480px){dl.info{grid-template-columns:1fr;gap:2px}dl.info dd{margin-bottom:10px}}
+
+.dates{display:flex;gap:8px;flex-wrap:wrap}
+.date{border:1.5px solid var(--fg);border-radius:10px;padding:6px 12px;text-align:center;line-height:1.2}
+.date small{display:block;font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.08em}
+.date strong{font-family:var(--display);font-size:1.25rem}
+
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:6px;align-content:start}
+.price.main{border:2px solid var(--accent)}
+.price .amt{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.price .amt small{font-family:var(--mono);font-weight:400;font-size:.8rem;color:var(--muted)}
+.price .tag{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+.price p{font-size:.93rem;color:var(--muted)}
+.deal{background:var(--soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+
+.pay{display:grid;gap:12px}
+.method{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:8px}
+.acct{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.acct code{font-family:var(--mono);font-size:1.1rem;font-weight:500;background:var(--bg);border-radius:8px;padding:6px 10px;user-select:all}
+.copy{font-family:var(--mono);font-size:.78rem;background:transparent;border:1.5px solid var(--line);color:var(--fg);border-radius:999px;padding:6px 12px;cursor:pointer}
+.note{font-size:.92rem;color:var(--muted)}
+.warn{border-left:3px solid var(--accent);padding-left:12px}
+
+.closing{padding:44px 0 56px}
+.closing h2{font-size:clamp(1.8rem,6vw,2.4rem)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Sundays · Dec 6 – 20, 2026 · in English</span>
+    <h1>Learn West Coast Swing. Make <em>friends</em> in Seoul.</h1>
+    <p class="lede">A 3-week beginner series for anyone who wants an English-speaking social activity. No partner or experience needed.</p>
+    <div class="counts" aria-hidden="true">
+      <span>1</span><span>2</span><span class="hit">3&amp;4</span><span>5</span><span class="hit">&amp;6</span>
+    </div>
+    <p class="slotnote" aria-hidden="true">the basic: walk, walk, triple step, triple step</p>
+    <ul class="facts">
+      <li><b>6:30–7:30 PM</b></li>
+      <li>Westies, Gangnam</li>
+      <li>From <b>55,000 KRW</b></li>
+      <li>15 leaders + 15 followers</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn big" href="https://forms.gle/REPLACE-WITH-FORM-LINK" target="_blank" rel="noopener">Save my spot ↗</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>This is for you if you</h2>
+    <ul class="ticks">
+      <li>Want an English-speaking social activity in Seoul</li>
+      <li>Want to try a fun, easy-to-learn dance</li>
+      <li>Have no dance experience</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What is West Coast Swing?</h2>
+    <p>A smooth partner dance you can do to almost anything, from pop to R&amp;B. You dance in a "slot": the follower travels back and forth along a line while the leader stays near the centre.</p>
+    <p><a href="https://www.youtube.com/results?search_query=west+coast+swing+social+dance" target="_blank" rel="noopener">Watch West Coast Swing on YouTube ↗</a></p>
+  </section>
+
+  <section>
+    <h2>Class schedule &amp; info</h2>
+    <div class="dates" aria-label="Class dates">
+      <div class="date"><small>SUN</small><strong>Dec 6</strong></div>
+      <div class="date"><small>SUN</small><strong>Dec 13</strong></div>
+      <div class="date"><small>SUN</small><strong>Dec 20</strong></div>
+    </div>
+    <dl class="info">
+      <dt>Time</dt><dd>6:30 PM – 7:30 PM</dd>
+      <dt>Instructors</dt><dd>Jamie &amp; Joe</dd>
+      <dt>Language</dt><dd>English</dd>
+      <dt>Who can join</dt><dd>Anyone interested in West Coast Swing. No partner or experience needed.</dd>
+      <dt>Capacity</dt><dd>First 15 Leaders (men) &amp; 15 Followers (women). Spots go first come, first served, by payment.</dd>
+      <dt>Bring</dt><dd>Clean indoor shoes or dance sneakers</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Venue &amp; getting there</h2>
+    <dl class="info">
+      <dt>Venue</dt><dd>Westies (웨스티스)<br><a href="https://naver.me/5ch06UGN" target="_blank" rel="noopener">Open in Naver Map ↗</a></dd>
+      <dt>Transport</dt><dd>No venue parking. Public transport is recommended.</dd>
+      <dt>Parking</dt><dd>
+        <strong>Nice Park, Samwon Tower</strong>: holiday 1-day pass 8,000 KRW (00:00–23:59), 5-min walk. Buy the ticket in the Modu Parking (모두의주차장) app before you enter.<br>
+        <strong>Public lots</strong>: Yeoksam 1-dong Cultural Center, Gangnam Cultural Center
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Pricing</h2>
+    <div class="prices">
+      <div class="price main">
+        <span class="tag">Recommended</span>
+        <h3>Full 3-week series</h3>
+        <div class="amt">60,000 <small>KRW</small></div>
+        <p>All 3 classes. Includes social dance entry.</p>
+      </div>
+      <div class="price">
+        <span class="tag">Single class</span>
+        <h3>Drop-in</h3>
+        <div class="amt">25,000 <small>KRW</small></div>
+        <p>Includes social dance entry. Best if you already know some WCS basics.</p>
+      </div>
+    </div>
+    <p class="deal"><strong>Bring a friend:</strong> 5,000 KRW off per person when 2 or more of you register for the full series together (55,000 KRW each).</p>
+  </section>
+
+  <section>
+    <h2>Payment</h2>
+    <div class="pay">
+      <div class="method">
+        <h3>1. Bank transfer</h3>
+        <p class="note">KB Bank · Byeon Seong-jae (변성재 웨코)</p>
+        <div class="acct">
+          <code id="acct">449901-01-227967</code>
+          <button class="copy" id="copyBtn" type="button">Copy</button>
+        </div>
+        <p class="note">Sender name: your name + N, e.g. <strong>AlexN</strong></p>
+      </div>
+      <div class="method">
+        <h3>2. Pay on site</h3>
+        <p class="note">You can pay on the day of the class.</p>
+        <p class="note warn">The card terminal can't process overseas or foreign credit cards. If you only have an international card, bring cash.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Policies</h2>
+    <dl class="info">
+      <dt>Refunds</dt><dd>Full refund before the course starts. No refunds once the first class has started.</dd>
+      <dt>Cancellation</dt><dd>The class may be cancelled if fewer than 3 leaders and 3 followers register. You'll be notified individually 3 days before the start date.</dd>
+    </dl>
+  </section>
+
+  <section class="closing">
+    <h2>Turn your playlist into a dance floor.</h2>
+    <p class="lede">Register, transfer the fee, and your spot is confirmed.</p>
+    <div class="cta-row">
+      <a class="btn ghost" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSuCQAibFvSnmUYWoTQwMdhs4lIMbCH_i9ZKbZGGJ3KFwJu-30kqxwJvZVJwEt7b7B7cfQByWuta-rX/pubhtml?gid=1&amp;single=true" target="_blank" rel="noopener">Check registration status ↗</a>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var btn=document.getElementById('copyBtn'), el=document.getElementById('acct');
+  function selectIt(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';}
+  btn.addEventListener('click',function(){
+    var t=el.textContent.trim();
+    try{
+      navigator.clipboard.writeText(t).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1800)},selectIt);
+    }catch(e){selectIt();}
+  });
+})();
+</script>
+</body>
+</html>
