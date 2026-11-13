@@ -9,7 +9,30 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-TXS7CHRXF9');
+  // Short link codes (?r=ksj) -> full UTM tags. code: [source, medium, content]
+  var codes = {
+    ksj: ['kakaotalk', 'social', 'joe'],   ksa: ['kakaotalk', 'social', 'jamie'],
+    isj: ['instagram', 'social', 'joe'],   isa: ['instagram', 'social', 'jamie'],
+    fsj: ['facebook',  'social', 'joe'],   fsa: ['facebook',  'social', 'jamie'],
+    wsj: ['whatsapp',  'social', 'joe'],   wsa: ['whatsapp',  'social', 'jamie'],
+    msj: ['meetup',    'social', 'joe'],   msa: ['meetup',    'social', 'jamie'],
+    rsj: ['reddit',    'social', 'joe'],
+    afj: ['amy',   'friend', 'joe'],
+    mfj: ['mally', 'friend', 'joe'],
+    ufj: ['udit',  'friend', 'joe'],
+    vfj: ['vanna', 'friend', 'joe'],
+    pqb: ['poster', 'qr', '']
+  };
+
+  var gaConfig = {};
+  var hit = codes[new URLSearchParams(location.search).get('r')];
+  if (hit) {
+    gaConfig.page_location = location.origin + location.pathname +
+      '?utm_source=' + hit[0] + '&utm_medium=' + hit[1] +
+      '&utm_campaign=beginners_dec26' + (hit[2] ? '&utm_content=' + hit[2] : '');
+  }
+
+  gtag('config', 'G-TXS7CHRXF9', gaConfig);
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>West Coast Swing Seoul</title>
